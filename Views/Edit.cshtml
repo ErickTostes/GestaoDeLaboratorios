@@ -1,0 +1,65 @@
+﻿@page
+@model GestaoDeLaboratorios.Views.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Computadores</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Computadores.Id" />
+            <div class="form-group">
+                <label asp-for="Computadores.Marca" class="control-label"></label>
+                <input asp-for="Computadores.Marca" class="form-control" />
+                <span asp-validation-for="Computadores.Marca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computadores.Processador" class="control-label"></label>
+                <input asp-for="Computadores.Processador" class="form-control" />
+                <span asp-validation-for="Computadores.Processador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computadores.PlacaMae" class="control-label"></label>
+                <input asp-for="Computadores.PlacaMae" class="form-control" />
+                <span asp-validation-for="Computadores.PlacaMae" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computadores.Memoria" class="control-label"></label>
+                <input asp-for="Computadores.Memoria" class="form-control" />
+                <span asp-validation-for="Computadores.Memoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computadores.HD" class="control-label"></label>
+                <input asp-for="Computadores.HD" class="form-control" />
+                <span asp-validation-for="Computadores.HD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computadores.NumeroPatrimonio" class="control-label"></label>
+                <input asp-for="Computadores.NumeroPatrimonio" class="form-control" />
+                <span asp-validation-for="Computadores.NumeroPatrimonio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computadores.DataCompra" class="control-label"></label>
+                <input asp-for="Computadores.DataCompra" class="form-control" />
+                <span asp-validation-for="Computadores.DataCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

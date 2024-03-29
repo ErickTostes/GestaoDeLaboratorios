@@ -1,0 +1,61 @@
+﻿@page
+@model GestaoDeLaboratorios.Views.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Computadores</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.Marca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.Marca)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.Processador)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.Processador)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.PlacaMae)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.PlacaMae)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.Memoria)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.Memoria)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.HD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.HD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.NumeroPatrimonio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.NumeroPatrimonio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Computadores.DataCompra)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Computadores.DataCompra)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Computadores.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
